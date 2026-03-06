@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Build on Smart Connections</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Libre Baskerville', serif;
+background:#f5f0e6;
+color:#4b2e2e;
+}
+
+header{
+background:#6f4e37;
+color:#f5f0e6;
+text-align:center;
+padding:20px;
+}
+
+header h1{
+font-family:'Dancing Script',cursive;
+font-size:42px;
+margin:0;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:#f5f0e6;
+margin:12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:40px;
+text-align:center;
+}
+
+.features{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.feature{
+background:#e6d5c3;
+padding:20px;
+margin:15px;
+width:260px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.feature:hover{
+transform:scale(1.05);
+}
+
+.info{
+display:none;
+margin-top:12px;
+font-size:14px;
+text-align:left;
+}
+
+.account{
+background:#e6d5c3;
+padding:30px;
+width:300px;
+margin:auto;
+border-radius:10px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+border:1px solid #6f4e37;
+font-family:'Libre Baskerville', serif;
+}
+
+button{
+background:#6f4e37;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+font-family:'Libre Baskerville', serif;
+}
+
+footer{
+background:#6f4e37;
+color:#f5f0e6;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+ul{
+padding-left:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Career Build on Smart Connections</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#account">Create Account</a>
+</nav>
+
+</header>
+
+
+<section id="about">
+
+<h2>About</h2>
+
+<p>
+This platform encourages students and young professionals to grow their careers
+by creating meaningful professional relationships. Smart networking and mentorship
+can open doors to internships, job opportunities, and valuable career guidance.
+</p>
+
+</section>
+
+
+<section id="features">
+
+<h2>Features</h2>
+
+<div class="features">
+
+<!-- Networking -->
+
+<div class="feature" onclick="toggleInfo('net')">
+
+<h3>Networking</h3>
+
+<div id="net" class="info">
+
+<p>
+Professional networking helps individuals connect with people who share
+similar career interests. Through networking, students can learn about
+industry trends, improve communication skills, and discover hidden job opportunities.
+</p>
+
+<p>
+Building strong connections with professionals can also lead to
+recommendations, collaborations, and long-term career growth.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Mentoring -->
+
+<div class="feature" onclick="toggleInfo('mentor')">
+
+<h3>Mentoring</h3>
+
+<div id="mentor" class="info">
+
+<p>Mentorship helps students gain career direction and practical advice.</p>
+
+<ul>
+<li>Get career guidance from experienced professionals.</li>
+<li>Learn industry-relevant skills and best practices.</li>
+<li>Receive feedback on resumes and portfolios.</li>
+<li>Understand how to prepare for interviews.</li>
+<li>Develop confidence and professional communication.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- Opportunities -->
+
+<div class="feature" onclick="toggleInfo('opp')">
+
+<h3>Opportunities</h3>
+
+<div id="opp" class="info">
+
+<p>Some real-time internship opportunities students commonly apply for:</p>
+
+<ul>
+<li>Google – Software Engineering Internship</li>
+<li>Microsoft – Student Intern Program</li>
+<li>Amazon – Operations / Tech Internship</li>
+<li>Deloitte – Business Analyst Internship</li>
+<li>TCS / Infosys – Graduate Trainee Internship</li>
+</ul>
+
+<p>
+These opportunities help students gain practical experience
+and build professional skills before entering full-time careers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="account">
+
+<h2>Create Account</h2>
+
+<div class="account">
+
+<input type="text" id="username" placeholder="Create Username">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="createAccount()">Create Account</button>
+
+<p id="accountMsg"></p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Career Build on Smart Connections</p>
+
+</footer>
+
+
+<script>
+
+function toggleInfo(id){
+
+let info=document.getElementById(id);
+
+if(info.style.display==="block"){
+info.style.display="none";
+}else{
+info.style.display="block";
+}
+
+}
+
+function createAccount(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user==="" || pass===""){
+document.getElementById("accountMsg").innerText="Please enter username and password";
+}
+else{
+document.getElementById("accountMsg").innerText="Account created successfully!";
+}
+
+}
+
+</script>
+
+</body>
+</html>
